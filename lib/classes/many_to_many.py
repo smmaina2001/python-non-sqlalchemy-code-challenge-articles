@@ -44,7 +44,7 @@ class Author:
         return self._name
     
     @name.setter 
-    def name(self, name):
+    def name(self,name):
         if name != self.name:
             return self._name
         elif isinstance(name, str) and len(name) > 0:
@@ -80,7 +80,7 @@ class Magazine:
     
     @property
     def name(self):
-        return self._name
+        return self_name
     
     @name.setter
     def name(self, name):
@@ -97,7 +97,7 @@ class Magazine:
             self._category = category
 
     def articles(self):
-        return [article for article in Article.all if article.magazine = self]
+        return [article for article in Article.all if article.magazine == self]
 
     def contributors(self):
         unique_contributors = set([article.author for article in self_articles()])
