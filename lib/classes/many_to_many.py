@@ -100,7 +100,7 @@ class Magazine:
         return [article for article in Article.all if article.magazine == self]
 
     def contributors(self):
-        unique_contributors = set([article.author for article in self_articles()])
+        unique_contributors = set([article.author for article in self.articles()])
         return list(unique_contributors)
 
     def article_titles(self):
