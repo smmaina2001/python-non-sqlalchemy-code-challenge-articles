@@ -44,7 +44,7 @@ class Author:
         return self._name
     
     @name.setter 
-    def name(self,name):
+    def name(self, name):
         if name != self.name:
             return self._name
         elif isinstance(name, str) and len(name) > 0:
@@ -80,7 +80,7 @@ class Magazine:
     
     @property
     def name(self):
-        return self_name
+        return self._name
     
     @name.setter
     def name(self, name):
@@ -106,12 +106,12 @@ class Magazine:
     def article_titles(self):
         if [article.title for article in self.articles()] == []:
             return None
-        return [article.title for article in self_articles()]
+        return [article.title for article in self.articles()]
 
     def contributing_authors(self):
         if len([article.author for article in self.articles()]) <= 2:
             return None
-        return [article.author for article in self_articles()]
+        return [article.author for article in self.articles()]
         
         
 
